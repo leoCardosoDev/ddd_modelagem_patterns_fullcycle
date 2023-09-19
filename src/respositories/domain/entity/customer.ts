@@ -17,6 +17,10 @@ export default class Customer {
     return this._name;
   }
 
+  get address(): Address {
+    return this._address;
+  }
+
   get id():string {
     return this._id;
   }
@@ -39,6 +43,12 @@ export default class Customer {
     this._name = name;
     this.validate();
   }
+  
+  changeAddress(address: Address) {
+    this._address = address;
+    this.validate();
+  }
+  
 
   isActive() {
     return this._active;
